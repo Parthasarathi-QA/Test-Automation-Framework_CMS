@@ -2,7 +2,7 @@ name: Test pipeline
 
 on:
   schedule:
-    - cron: '00 15 * * *'
+    - cron: '00 15 * * *' 
   push:
     branches:
       - master
@@ -26,7 +26,7 @@ jobs:
           cache: maven
 
       - name: Run Tests
-        run: mvn test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true
+        run: mvn clean test -X -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true
 
       # Upload logs
       - name: Upload Logs
