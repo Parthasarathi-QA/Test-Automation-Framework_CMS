@@ -68,5 +68,5 @@ jobs:
         with:
           branch: gh-pages
           folder: public/extent-reports
-          token: ${{ secrets.Testing purpose01}}
+          token: ${{ secrets.TEST1234}}
           clean: true
