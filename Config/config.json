@@ -1,0 +1,16 @@
+{
+  "environments": {
+    "DEV": {
+      "url": "https://thinking-tester-contact-list.herokuapp.com/",
+	  "MAX_NUM_OF_ATTEMPTS" :3
+    },
+    "QA": {
+      "url": "https://thinking-tester-contact-list.herokuapp.com/"		,
+			  "MAX_NUM_OF_ATTEMPTS" :3
+    },
+    "UAT": {
+      "url": "https://thinking-tester-contact-list.herokuapp.com/"		,
+			  "MAX_NUM_OF_ATTEMPTS" :3
+    }
+  }
+}
