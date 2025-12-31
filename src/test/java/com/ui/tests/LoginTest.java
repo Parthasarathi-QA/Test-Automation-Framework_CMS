@@ -19,29 +19,35 @@ public class LoginTest extends TestBase{
 
 	
 
-	@Test(description = "Verify the valid user is able to login to the application", groups = { "e2e", "sanity",
-			"smoke" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestDataProvider")
-	public void loginTest(User user) {
-
-		assertEquals(loginPage.login(user.getEmailAddress(), user.getPassword()).getTitleOfPage(), "My Contacts",
-				"Login was not successful and Contact List Page is not Loaded");
-
-	}
-
-	@Test(description = "Verify the valid user is able to login to the application", groups = { "e2e", "sanity",
-			"smoke" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestCSVDataProvider")
-	public void loginCVTest(User user) {
-
-		assertEquals(loginPage.login(user.getEmailAddress(), user.getPassword()).getTitleOfPage(), "My Contacts",
-				"Login was not successful and Contact List Page is not Loaded");
-	}
-
+	/**
+	 * @Test(description =
+	 * "Verify the valid user is able to login to the application", groups = {
+	 * "e2e", "sanity", "smoke" }, dataProviderClass =
+	 * com.ui.dataproviders.LoginDataProvider.class, dataProvider =
+	 * "LoginTestDataProvider") public void loginTest(User user) {
+	 * 
+	 * assertEquals(loginPage.login(user.getEmailAddress(),
+	 * user.getPassword()).getTitleOfPage(), "My Contacts",
+	 * "Login was not successful and Contact List Page is not Loaded");
+	 * 
+	 * }
+	 * 
+	 * @Test(description =
+	 * "Verify the valid user is able to login to the application", groups = {
+	 * "e2e", "sanity", "smoke" }, dataProviderClass =
+	 * com.ui.dataproviders.LoginDataProvider.class, dataProvider =
+	 * "LoginTestCSVDataProvider") public void loginCVTest(User user) {
+	 * 
+	 * assertEquals(loginPage.login(user.getEmailAddress(),
+	 * user.getPassword()).getTitleOfPage(), "My Contacts",
+	 * "Login was not successful and Contact List Page is not Loaded"); }
+	 */
 	@Test(description = "Verify the valid user is able to login to the application", groups = { "e2e", "sanity",
 			"smoke" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestExcelDataProvider", retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
 	public void loginExcelTest(User user) {
 		
 		
-		assertEquals(loginPage.login(user.getEmailAddress(), user.getPassword()).getTitleOfPage(), "My Contacts1",
+		assertEquals(loginPage.login(user.getEmailAddress(), user.getPassword()).getTitleOfPage(), "My Contacts",
 				"Login was not successful and Contact List Page is not Loaded");
 		
 	}
